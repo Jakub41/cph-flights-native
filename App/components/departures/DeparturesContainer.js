@@ -10,7 +10,7 @@ import DepartureCard from './DepartureCard';
 class DeparturesContainer extends Component {
 
     componentWillMount() {
-        this.props.FetchFlightData();
+        this.props.FetchFlightData('departures');
     }
 
     renderDepartureCards() {

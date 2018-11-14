@@ -22,7 +22,9 @@ export default function (state = initialState, action) {
                 isFetching: false,
                 data: action.payload,
                 hasError: false,
-                errorMessage: null
+                errorMessage: null,
+                arrivals: action.payload.type === 'arrivals' ? action.payload.data: state.arrivals,
+                departures: action.payload.type === 'departures' ? action.payload.data:state.departures
             });
 
         case FETCHING_FLIGHTS_DATA_FAIL:

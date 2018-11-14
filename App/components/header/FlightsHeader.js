@@ -7,7 +7,7 @@ const FlightsHeader = props => {
         <View
             style={{
                 height: 200,
-                marginTop: Platform.OS == "ios" ? 0 : 0
+                marginTop: Platform.OS === "ios" ? 0 : 0
             }}
         >
             <Header {...props} />
