@@ -20,11 +20,11 @@ export default function (state = initialState, action) {
         case FETCHING_FLIGHTS_DATA_SUCCESS:
             return Object.assign({}, state, {
                 isFetching: false,
-                data: action.payload,
+                data:
+                    action.payload.type === 'arrivals' ? action.payload.data:
+                        action.payload.type === 'departures' ? action.payload.data: '',
                 hasError: false,
                 errorMessage: null,
-                arrivals: action.payload.type === 'arrivals' ? action.payload.data: state.arrivals,
-                departures: action.payload.type === 'departures' ? action.payload.data:state.departures
             });
 
         case FETCHING_FLIGHTS_DATA_FAIL:

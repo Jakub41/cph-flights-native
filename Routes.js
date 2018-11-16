@@ -5,6 +5,7 @@ import FlightsTabNavigator from "./App/navigations/FlightsTabNavigator";
 import FlightsHeader from "./App/components/header/FlightsHeader";
 import HeaderStyle from "./App/styles/HeaderStyle";
 import s from "./App/styles/headerImgStyle";
+import DepartureCard from "./App/components/departures/DepartureCard";
 
 const Routes = createStackNavigator({
     FlightsTabNavigator: {
